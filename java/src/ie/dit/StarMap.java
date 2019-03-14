@@ -22,6 +22,12 @@ public class StarMap extends PApplet
         loadData();
         printStars();
         border = width * 0.05f;
+        
+        System.out.println("Our map is: " + map1(5, 0, 100, 0, 200));
+        System.out.println("Their map is: " + map(5, 0, 100, 0, 200));
+
+        System.out.println("Our map is: " + map1(-5, -10, 1, -100, 1));
+        System.out.println("Their map is: " + map(-5, -10, 1, -100, 1));
     }
 
     public void loadData()
@@ -96,7 +102,7 @@ public class StarMap extends PApplet
 
     public void mouseClicked()
     {
-            
+        if 
     }
 
     public void draw()
@@ -104,6 +110,17 @@ public class StarMap extends PApplet
         background(0);
         drawGrid();
         drawStars();
+    }
+
+    /*
+        @val: Value to be converted
+        @start1: Lower bound of range 1
+        @stop1: Upper bound of range 1
+        @start2: Lower bound of range 2
+        @stop2: Upper bound of range 2
+    */
+    public float map1(float val, float start1, float stop1, float start2, float stop2){
+        return (start2 + (stop2 - start2) * ((val - start1) / (stop1 - start1)));
     }
 
     private ArrayList<Star> stars = new ArrayList<Star>();
