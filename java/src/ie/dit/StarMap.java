@@ -21,24 +21,15 @@ public class StarMap extends PApplet {
         /*
          * Star s = new Star(); s.setDisplayName("DIT"); stars.add(s); Star s1 =
          * stars.get(0);
-         * 
+         *
          * s1.setDisplayName("TU Dublin");
-         * 
+         *
          * System.out.println(s); System.out.println(stars.get(0));
          * System.out.println(s1);
          */
 
         loadData();
         printStars();
-<<<<<<< HEAD
-        border = width * 0.05f;
-        
-        System.out.println("Our map is: " + map1(5, 0, 100, 0, 200));
-        System.out.println("Their map is: " + map(5, 0, 100, 0, 200));
-
-        System.out.println("Our map is: " + map1(-5, -10, 1, -100, 1));
-        System.out.println("Their map is: " + map(-5, -10, 1, -100, 1));
-=======
         border = width * 0.1f;
 
         // Testing the map function
@@ -47,7 +38,6 @@ public class StarMap extends PApplet {
         System.out.println(map1(25, 20, 30, 30, 40));
         System.out.println(map(0, -100, 200, 100, 500));
         System.out.println(map1(0, -100, 200, 100, 500));
->>>>>>> eddb58ad50b5d817ff156fb2f95a377429e72cbc
     }
 
     public void loadData() {
@@ -121,11 +111,6 @@ public class StarMap extends PApplet {
         for (int i = 0; i < stars.size(); i++) {
             Star s = stars.get(i);
 
-<<<<<<< HEAD
-    public void mouseClicked()
-    {
-        if 
-=======
             float x = map(s.getxG(), -5, 5, border, width - border);
             float y = map(s.getyG(), -5, 5, border, height - border);
 
@@ -140,7 +125,6 @@ public class StarMap extends PApplet {
                 }
             }
         }
->>>>>>> eddb58ad50b5d817ff156fb2f95a377429e72cbc
     }
 
     public void draw() {
@@ -173,17 +157,6 @@ public class StarMap extends PApplet {
                     height - 25);
         }
 
-    }
-
-    /*
-        @val: Value to be converted
-        @start1: Lower bound of range 1
-        @stop1: Upper bound of range 1
-        @start2: Lower bound of range 2
-        @stop2: Upper bound of range 2
-    */
-    public float map1(float val, float start1, float stop1, float start2, float stop2){
-        return (start2 + (stop2 - start2) * ((val - start1) / (stop1 - start1)));
     }
 
     private ArrayList<Star> stars = new ArrayList<Star>();
